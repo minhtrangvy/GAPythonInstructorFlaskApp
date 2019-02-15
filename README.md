@@ -21,7 +21,7 @@ This app is....
 * Data pulled from at least API
 * Clean HTML and CSS
 * Python concepts: 
-..dictionary or set or tuple
-..**args, kawargs, or *kwargs
-..a class
-..user input or reading content from a file
+   dictionary or set or tuple
+   **args, kawargs, or *kwargs
+   a class
+   user input or reading content from a file
