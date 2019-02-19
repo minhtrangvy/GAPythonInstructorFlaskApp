@@ -12,13 +12,13 @@ Here we will dive a little deeper into the requirements of the coding challenge 
     - Also used the Twilio SMS API to send text messages
 - Clean HTML and CSS
 - Python concepts:
-    - [dictionary](../blob/master/gaproject/util.py#L9), [set](../blob/master/gaproject/__init__.py#L60), or tuple
+    - [dictionary](/master/gaproject/util.py#L9), [set](../blob/master/gaproject/__init__.py#L60), or tuple
     - [**args](../blob/master/gaproject/__init__.py#L126), kwargs, or *kwargs
-    - A [class](../blog/master/gaproject/models)
+    - A [class](../blob/master/gaproject/models)
     - user input or [reading content from a file](../blob/master/gaproject/util.py)
 - Comments
     - There is this README as well as some inline comments littered through the code where necessary
-
+https://github.com/minhtrangvy/GAPythonInstructorFlaskApp/blob/blob/master/gaproject/util.py#L9
 ## Routes
 ### /, /index
 Returns the Home page that describes what the app is about and how to nagivate it.
