@@ -94,5 +94,5 @@ def _construct_sms(matching_movies):
            'Here is a reminder to see these movies:\n' + str(pretty_print_movies)
 
 
-def _remove_unicode(*movies):
-    return [m.title.encode('UTF8') for m in movies]
+def _remove_unicode(*args):
+    return [m.title.encode('UTF8') for m in args]
