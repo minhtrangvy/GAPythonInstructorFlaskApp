@@ -8,8 +8,8 @@ import util
 from app import app
 from config import Config
 from forms import UserPreferencesForm
-from movie import Movie
-from results import Results
+from app.models.movie import Movie
+from app.models.results import Results
 from twilio.rest import Client
 
 
@@ -89,12 +89,6 @@ def _send_sms(user_results):
 
 
 def _construct_sms(matching_movies):
-    for m in matching_movies:
-        print m.title
-
-    eyyy=  sorted(matching_movies)
-    for m in eyyy:
-        print m.title
     pretty_print_movies = '- ' + '\n- '.join(sorted([m.title.encode('UTF8') for m in matching_movies]))
     return 'Thank you for using Trang\'s Movie App!\n' \
            'Here is a reminder to see these movies:\n' + str(pretty_print_movies)

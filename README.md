@@ -1,20 +1,20 @@
 # GAPythonInstructorFlaskApp
 This is for GA's Python Instructor position. 
-This app is....
+This app is a movie app! Read more about the actual purpose of the app in index.html<br>
+Here we will dive a little deeper into the requirements of the coding challenge and how this repo meets those requirements.
 
-## Endpoints
-### /xxx
-#### Example curl
-#### Response
-### /yyy
-#### Example curl
-#### Response
-### /zzz
-#### Example curl
-#### Response
+## Requirements
+- At least 3 routes with views, at least one GET and one POST
+    - The 3 routes can be found in routes.py: /index, /form, /all_movies
+    - The form one can handle both GET and POST and the rest are by default only handle GET requests
+- 
+
+## Routes
+### / or /index
+### /all_movies
+### /form
 
 ## Instructions
-export FLASK_APP=movieapp.py
 
 ## Requirements Fullfillment
 * 3 working routes with views
