@@ -1,3 +1,4 @@
+/*Results accordion styling*/
 .accordion {
     background-color: #eee;
     color: #444;
@@ -11,8 +12,13 @@
     transition: 0.4s;
 }
 
-.active, .accordion:hover {
-    background: #000;
+.active {
+    background: #26a7de;
+    round-color: #ccc;
+}
+
+.accordion:hover {
+    background: #26a7de;
     round-color: #ccc;
 }
 
@@ -21,4 +27,77 @@
     display: none;
     background-color: white;
     overflow: hidden;
+}
+
+
+/*img {*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+body {
+    color: white;
+    background-color: #929292;
+}
+
+
+/*Image to text transition*/
+.container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.image {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .8s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: .93;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    /*-webkit-transform: translate(-10%, -10%);*/
+    /*-ms-transform: translate(-10%, -10%);*/
+    transform: translate(-30%, -50%);
+    text-align: center;
+}
+
+
+/*Personal preference*/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: white;
+}
+
+a.special {
+    color: black;
 }

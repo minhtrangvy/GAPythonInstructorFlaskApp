@@ -69,7 +69,7 @@ def _fetch_movies():
     response = requests.get(request)
 
     # Convert json to Movie objects
-    movies = [Movie(movie['id'], movie['title'], movie['genre_ids'], movie['vote_average'], movie['overview']) for movie in response.json()['results']]
+    movies = [Movie(movie['id'], movie['title'], movie['genre_ids'], movie['vote_average'], movie['overview'], movie['poster_path']) for movie in response.json()['results']]
     return movies
 
 
@@ -79,7 +79,7 @@ def _checklist_mapping(chosen_genres):
 
 
 def _send_sms(user_results):
-    if len(user_results.movies) > 0:
+    if len(user_results.movies) > 0 and user_results.phone_number:
         client = Client(Config.ACCOUNT_SID, Config.AUTH_TOKEN)
         client.messages.create(
             from_='+18036102506',

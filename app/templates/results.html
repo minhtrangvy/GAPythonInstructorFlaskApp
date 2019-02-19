@@ -6,13 +6,14 @@
 
     {% if result is defined %}
         A text of the results was sent to your phone number at {{ result.phone_number}}!<br>
-        The genres you chose were: {{result.chosen_genres}} <br>
+        The genres you chose were: {{result.chosen_genres}} <br><br>
 
         <!-- List all movies that fit the user's chosen genres -->
         {% if result.movies is defined and result.movies|length > 0 %}
             {% for movie in result.movies %}
-                <button class="accordion">{{movie.title}}</button>
+                <button class="accordion">{{movie.title}}</button><br>
                 <div class="panel">
+                  <!--<img src={{movie.poster_url}}><br>-->
                   <p>{{movie.overview}}</p>
                 </div><br>
             {% endfor %}
@@ -26,6 +27,5 @@
         Whoops, we did not save your user preferences. Please go back to the "User Preferences" page and enter your preferences again to get your results!
     {% endif %}
 <br>
-<br>
-    <a href="/form">Try again!</a>
+    <a href="/form" class="special">Try again!</a>
 {% endblock %}
