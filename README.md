@@ -7,7 +7,17 @@ Here we will dive a little deeper into the requirements of the coding challenge 
 - At least 3 routes with views, at least one GET and one POST
     - The 3 routes can be found in routes.py: /index, /form, /all_movies
     - The form one can handle both GET and POST and the rest are by default only handle GET requests
-- 
+- Data pulled from at least 1 API
+    - Pulled data from The Movie DB API 
+    - Also used the Twilio SMS API to send text messages
+- Clean HTML and CSS
+- Python concepts:
+    - [dictionary](../blob/master/app/util.py#L5), [set](../blob/master/app/routes.py#L46), or tuple
+    - **args, kwargs, or *kwargs
+    - A class
+    - user input or reading content from a file
+- Comments
+    - There is this README as well as some inline comments littered through the code where necessary
 
 ## Routes
 ### / or /index
@@ -15,13 +25,5 @@ Here we will dive a little deeper into the requirements of the coding challenge 
 ### /form
 
 ## Instructions
-
-## Requirements Fullfillment
-* 3 working routes with views
-* Data pulled from at least API
-* Clean HTML and CSS
-* Python concepts: 
-   dictionary or set or tuple
-   **args, kawargs, or *kwargs
-   a class
-   user input or reading content from a file
+1. An email will be sent with the Twilio Auth, please do: `export AUTH_TOKEN='21xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'`
+2. 

@@ -69,7 +69,7 @@ def _fetch_movies():
     response = requests.get(request)
 
     # Convert json to Movie objects
-    movies = [Movie(movie['title'], movie['genre_ids'], movie['vote_average'], movie['overview']) for movie in response.json()['results']]
+    movies = [Movie(movie['id'], movie['title'], movie['genre_ids'], movie['vote_average'], movie['overview']) for movie in response.json()['results']]
     return movies
 
 
@@ -89,6 +89,10 @@ def _send_sms(user_results):
 
 
 def _construct_sms(matching_movies):
-    pretty_print_movies = '- ' + '\n- '.join(sorted([m.title.encode('UTF8') for m in matching_movies]))
+    pretty_print_movies = '- ' + '\n- '.join(sorted(_remove_unicode(*matching_movies)))
     return 'Thank you for using Trang\'s Movie App!\n' \
            'Here is a reminder to see these movies:\n' + str(pretty_print_movies)
+
+
+def _remove_unicode(*movies):
+    return [m.title.encode('UTF8') for m in movies]
