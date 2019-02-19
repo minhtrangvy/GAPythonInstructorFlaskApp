@@ -2,15 +2,19 @@ import datetime
 
 import requests
 from dateutil.relativedelta import relativedelta
+from flask import Flask
 from flask import render_template
+from flask_debug import Debug
 from twilio.rest import Client
 
 import util
-from app import app
-from app.models.movie import Movie
-from app.models.results import Results
+from config import Config
 from config import Config
 from forms import UserPreferencesForm
+from gaproject.models.movie import Movie
+from gaproject.models.results import Results
+
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -89,7 +93,6 @@ def _checklist_mapping(chosen_genres):
     :param chosen_genres: list of unicode strings of genre ids
     :return list: of dictionaries of genre id to friendly name of only the chosen genres
     """
-    print chosen_genres
     all_genres = util.read_in_genres_from_csv()
     return [all_genres[cg] for cg in chosen_genres]
 
@@ -127,3 +130,9 @@ def _remove_unicode(*args):
     :return: list of modified Movie objects
     """
     return [m.title.encode('UTF8') for m in args]
+
+
+if __name__ == '__main__':
+    Debug(app)
+    app.config.from_object(Config)
+    app.run(debug=True, host='0.0.0.0', port=5000)

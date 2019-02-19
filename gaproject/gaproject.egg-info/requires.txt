@@ -1,0 +1,5 @@
+flask==1.0.2
+flask_debug
+Flask_WTF
+python-dateutil
+twilio
