@@ -1,19 +1,21 @@
 /*Results accordion styling*/
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: #929292;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 15pt;
     transition: 0.4s;
+    text-decoration: underline;
 }
 
 .active {
     background: #26a7de;
+    color: white;
     round-color: #ccc;
 }
 
@@ -30,21 +32,10 @@
 }
 
 
-/*img {*/
-    /*display: block;*/
-    /*margin: 0 auto;*/
-/*}*/
-
-body {
-    color: white;
-    background-color: #929292;
-}
-
-
 /*Image to text transition*/
 .container {
     position: relative;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -78,8 +69,6 @@ body {
     position: absolute;
     top: 50%;
     left: 40%;
-    /*-webkit-transform: translate(-10%, -10%);*/
-    /*-ms-transform: translate(-10%, -10%);*/
     transform: translate(-30%, -50%);
     text-align: center;
 }
@@ -98,6 +87,17 @@ a:visited {
     color: white;
 }
 
-a.special {
+.special {
     color: black;
+}
+
+.small {
+    font-size: 12pt;
+}
+
+body {
+    color: white;
+    background-color: #929292;
+    font-size: 15pt;
+    font-family: system-ui;
 }

@@ -5,27 +5,28 @@
     <h1>Results</h1>
 
     {% if result is defined %}
-        A text of the results was sent to your phone number at {{ result.phone_number}}!<br>
+        {% if result.phone_number|length > 0 %}
+            A text of the results was sent to your phone number at {{ result.phone_number}}!<br>
+        {% endif %}
         The genres you chose were: {{result.chosen_genres}} <br><br>
 
         <!-- List all movies that fit the user's chosen genres -->
         {% if result.movies is defined and result.movies|length > 0 %}
             {% for movie in result.movies %}
-                <button class="accordion">{{movie.title}}</button><br>
+                <button class="accordion">{{movie.title}}</button>
                 <div class="panel">
-                  <!--<img src={{movie.poster_url}}><br>-->
-                  <p>{{movie.overview}}</p>
-                </div><br>
+                  <img src={{movie.poster_url}}><br>
+                  <p class="special">{{movie.overview}}</p>
+                </div>
             {% endfor %}
         {% else %}
             <!--Error checking-->
             Awh, there are no movies in theaters under any of your chosen genres. Sorry... <br>
-            <a href="/form">You can try again!</a>
         {% endif %}
     {% else %}
         <!--Error checking-->
         Whoops, we did not save your user preferences. Please go back to the "User Preferences" page and enter your preferences again to get your results!
     {% endif %}
 <br>
-    <a href="/form" class="special">Try again!</a>
+    <b><a href="/form" class="special">Try again!</a></b>
 {% endblock %}

@@ -2,6 +2,8 @@
 
 {% block content %}
     <h1>All Movies That Are In Theaters</h1>
+    Hover over movie posters to see a blurb of the movie.<br>
+    Sorry the images are kind of blurry, it's just whatever is provided from the TMDB API.<br><br>
     {% for movie in result.movies %}
         {% if movie.poster_url is not none %}
             <div class="container">
