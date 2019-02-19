@@ -37,4 +37,4 @@ Renders a form where the user can input their phone number and choose their favo
     - `pip install WTForms`
 3. Set `export FLASK_APP=gaproject` 
 4. Be in the `/GAPythonInstructorFlaskApp` folder and run `flask run`
-5. Go to localhost:5000 to experience the web app :)
+5. Go to [localhost:5000](localhost:5000) to experience the web app :)
