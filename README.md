@@ -12,8 +12,8 @@ Here we will dive a little deeper into the requirements of the coding challenge 
     - Also used the Twilio SMS API to send text messages
 - Clean HTML and CSS
 - Python concepts:
-    - [dictionary](../blob/master/gaproject/util.py#L5), [set](../blob/master/gaproject/routes.py#L46), or tuple
-    - [**args](../blob/master/gaproject/routes.py#L97), kwargs, or *kwargs
+    - [dictionary](../blob/master/gaproject/util.py#L9), [set](https://github.com/minhtrangvy/GAPythonInstructorFlaskApp/blob/master/gaproject/__init__.py#L60), or tuple
+    - [**args](https://github.com/minhtrangvy/GAPythonInstructorFlaskApp/blob/master/gaproject/__init__.py#L126), kwargs, or *kwargs
     - A [class](https://github.com/minhtrangvy/GAPythonInstructorFlaskApp/tree/master/gaproject/models)
     - user input or [reading content from a file](https://github.com/minhtrangvy/GAPythonInstructorFlaskApp/blob/master/gaproject/util.py)
 - Comments
