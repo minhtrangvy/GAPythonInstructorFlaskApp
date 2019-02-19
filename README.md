@@ -29,7 +29,7 @@ Renders a form where the user can input their phone number and choose their favo
 
 ## Instructions
 1. An email will be sent with the Twilio Auth, please do: `export AUTH_TOKEN='21xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'`
-2. Install all of the dependencies
+2. Install all of the dependencies by running `python setup.py install`. If that doesn't work, install each of these libraries independently. 
     - `pip istall flask`
     - `pip install python-dateutil`
     - `pip install requests`
@@ -37,4 +37,4 @@ Renders a form where the user can input their phone number and choose their favo
     - `pip install WTForms`
 3. Set `export FLASK_APP=gaproject` 
 4. Be in the `/GAPythonInstructorFlaskApp` folder and run `flask run`
-5. Go to [localhost:5000](localhost:5000) to experience the web app :)
+5. Go to localhost:5000 to experience the web app :)

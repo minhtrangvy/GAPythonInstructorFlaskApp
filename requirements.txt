@@ -1,0 +1,7 @@
+Flask==1.0.2
+twilio==6.24.1
+WTForms==2.2.1
+requests==2.21.0
+python-dateutil==2.8.0
+Flask-Debug==0.4.3
+Flask-WTF==0.14.2
