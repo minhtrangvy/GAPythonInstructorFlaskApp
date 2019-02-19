@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>All Movies That Are In Theaters</h1>
+    {% for movie in result.movies %}
+        <button class="accordion">{{movie.title}}</button>
+        <div class="panel">
+          <p>{{movie.overview}}</p>
+        </div><br>
+    {% endfor %}
+    <br>
+{% endblock %}

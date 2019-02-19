@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Your Preferences</h1>
+
+    <form action="" method="post">
+        <p>
+            <b>{{ form.phone_number.label }}</b><br>
+            This will send you a text message with the names of the movies. <br>
+            You can leave this blank if you'd prefer not to get text messages. <br>
+            And don't worry, I'm not saving your phone number anywhere :) <br>
+            {{ form.phone_number(size=32) }}
+        </p>
+        <p>
+            <b>{{ form.genres_checkbox.label }}</b><br>
+            {{ form.genres_checkbox()}}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

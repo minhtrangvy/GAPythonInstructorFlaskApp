@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Trang's Movie App</title>
+    {% endif %}
+    <link rel="stylesheet" href="../static/styles/css/app.css">
+
+    </head>
+    <body>
+        <div class="banner">
+            <a href="/index">Home</a> | <a href="/all_movies">In Theaters</a> | <a href="/form">Filter Movies</a><br>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+
+        <script src="../static/js/app.js"></script>
+    </body>
+</html>

@@ -14,7 +14,7 @@ This app is....
 #### Response
 
 ## Instructions
-
+export FLASK_APP=movieapp.py
 
 ## Requirements Fullfillment
 * 3 working routes with views

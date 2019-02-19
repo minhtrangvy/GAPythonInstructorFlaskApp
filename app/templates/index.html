@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Trang's Movie App!</h1>
+    Hi, you must be from GA :) <br>
+    Congratulations on getting to this page! This means you've probably set up everything correctly.<br>
+    <br>
+    This is a pretty simple web application built on Python Flask with some basic Javascript and CSS.<br>
+    Imagine you are thinking of watching a movie today or some time this week and you are wondering what movies are in theaters that you might like,
+    solely based on your genre preference. I know I personally only watch Romantic Comedies, Marvel movies, Animated movies by Pixar, Disney, or Dreamworks,
+    and the occasional documentary or DC movie. This app is for you!<br>
+    <br>
+    There are essentially three things you can do:
+    <ul>
+        <li>Look at all available movies in theaters</li>
+        <li>Filter those movies by your genre preference</li>
+        <li>Get your filtered results sent to you via SMS*</li>
+    </ul>
+
+    So what are you waiting for? Start your adventure below!<br>
+    See <a href="/all_movies">All Movies</a> or <a href="/form">Filter Movies</a>
+    <br>
+    <br>
+    * Note that I am only using a trial Twilio account for this project, so the SMS are sent for free.
+    Because of that, all trial messages are sent with the "Sent from your Twilio trial account -" string in front of the SMS.
+{% endblock %}
