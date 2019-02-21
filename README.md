@@ -37,6 +37,7 @@ All you have to do is run some Docker commands to get the web app working locall
     docker run -d -p 5000:5000 -e AUTH_TOKEN=21xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx gaproject
     ```    
     This spins up the web app!     
+    
     Run `docker ps` to make sure something is running. It should look something like this:
     ```
     (venv) ~/P/m/GAPythonInstructorFlaskApp » docker ps
