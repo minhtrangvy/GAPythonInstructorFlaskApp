@@ -4,7 +4,8 @@ This app is a movie app! Read more about the actual purpose of the app in index.
 
 ## Instructions
 This app is Dockerized. This means that all the dependencies are contained in a docker image. 
-All you have to do is run some Docker commands to get the web app working locally!
+All you have to do is run some Docker commands to get the web app working locally!    
+Make sure you have Docker installed.    
 1. In terminal, lease run `docker build -t gaproject:latest .` in the `/GAPythonInstructorFlaskApp` directory to build the image.
 2. An email will be sent with the Twilio Auth, it should look something like `21xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`.    
     Run the container by running this command: 
