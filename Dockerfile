@@ -1,16 +1,18 @@
-#RUN apt-get update -y
-#RUN apt-get install -y python-pip python-dev build-essential
-#COPY . /gaproject
-#WORKDIR /gaproject
-#RUN pip install -r requirements.txt
-#ENTRYPOINT ["python"]
-#CMD ["gaproject.py"]
+FROM python:2.7
 
-FROM ubuntu:latest
-COPY . /app
 WORKDIR /app
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
+
+# Install app dependencies
+ADD requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["/routes.py"]
+
+# Put everything into docker folder
+COPY . /app
+
+# Alias for FLASK_APP
+ENV FLASK_APP=gaproject
+ENV AUTH_TOKEN=placeholder
+
+EXPOSE 5000
+
+ENTRYPOINT ["flask", "run", "--host=0.0.0.0"]

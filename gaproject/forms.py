@@ -12,6 +12,6 @@ class MultiCheckboxField(SelectMultipleField):
 
 class UserPreferencesForm(FlaskForm):
     all_genres = util.read_in_genres_from_csv()
-    phone_number = StringField('Phone Number (+12223334444 format)')
+    phone_number = StringField('Phone Number ("2223334444" format)')
     genres_checkbox = MultiCheckboxField('Choose some genres you would like to watch:', choices=all_genres.items())
     submit = SubmitField('Submit')

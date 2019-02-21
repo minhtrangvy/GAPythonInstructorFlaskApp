@@ -108,7 +108,7 @@ def _send_sms(user_results):
         client.messages.create(
             from_='+18036102506',
             body=_construct_sms(user_results.movies),
-            to=user_results.phone_number
+            to='+1' + str(user_results.phone_number)
         )
 
 
