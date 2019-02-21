@@ -47,3 +47,9 @@ Returns the Home page that describes what the app is about and how to nagivate i
 Lists all the movies that are currently in theaters. More specifically, it lists all movies that were released within the last month.
 ### /form
 Renders a form where the user can input their phone number and choose their favorite movie genres.
+
+
+## Disclaimer
+All movie information displayed in this app is pulled from The Movie DB API.    
+Sometimes the API could have incorrect information because it is a relatively open API     
+where anyone can edit the information online. Kind of like Wikipedia.
