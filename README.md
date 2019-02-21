@@ -49,7 +49,11 @@ Lists all the movies that are currently in theaters. More specifically, it lists
 Renders a form where the user can input their phone number and choose their favorite movie genres.
 
 
-## Disclaimer
-All movie information displayed in this app is pulled from The Movie DB API.    
-Sometimes the API could have incorrect information because it is a relatively open API     
-where anyone can edit the information online. Kind of like Wikipedia.
+## The Movie DB API
+### Sample curls
+Fetch all movies released within a time frame
+```
+https://api.themoviedb.org/3/discover/movie?api_key=e8dde08f9b59d0ec23beda6b2b925cfc&primary_release_date.gte=2019-01-01&primary_release_date.lte=2019-02-18
+```
+### Disclaimer
+All movie information displayed in this app is pulled from The Movie DB API. Sometimes the API could have incorrect information because it is a relatively open API where anyone can edit the information online. Kind of like Wikipedia. If anything looks suspicious or wrong, don't hesitate to email me at trangandpuppies@gmail.com and I can send them a support email!
